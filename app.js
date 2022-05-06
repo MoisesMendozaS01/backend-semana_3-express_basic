@@ -23,6 +23,13 @@ app.get('/explorersInNode',(req,res)=>{
     res.send(explorer)
 })
 
+//Query Params: Recibir parámetro por la url
+//http://localhost:3000/explorers/moy
+// req.params= {"explorerName":"moy"}
+app.get('/explorers/:explorerName',(req,res)=>{
+    res.send(req.params)
+})
+
 // COn esto inicialisamos esta app
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
