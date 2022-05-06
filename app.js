@@ -10,8 +10,17 @@ app.get('/',(req,res)=>{
     res.send('Hello World!')
 })
 
+//respondiendo texto
+//localhost:3000/launchx
 app.get('/launchx',(req,res)=>{
     res.send('Bienvenidos a LaunchX!')
+})
+
+//Regresando un objeto
+// localhost:3000/explorersInNode
+app.get('/explorersInNode',(req,res)=>{
+    const explorer = {name:"Explorer",msg : "Hello"}
+    res.send(explorer)
 })
 
 // COn esto inicialisamos esta app
